@@ -4,7 +4,14 @@ console.log('-- begin --');
 // write the function to pass the assertions
 // fill in the documentation to describe the function
 
-const scramble = () => {};
+/**
+ * The Scramble function takes three parametrs,
+ * changes their order, concatrnates them,
+ * and returns a new result.
+ */
+const scramble = (parametr1, parametr2, parametr3) => {
+  return parametr3 + parametr1 + parametr2;
+};
 
 const _1_expect = 'yxz';
 const _1_actual = scramble('x', 'z', 'y');
