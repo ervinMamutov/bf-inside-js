@@ -3,11 +3,14 @@
 console.log('-- begin --');
 
 /**
- * _
+ * Check the text length and 
+ * compare it to the set value.
  *
- * @_ {_} _ - _
- * @_ {_} _ - _
- * @_ {_} _
+ * @parametr {string} text - The string to check and compare
+ * @parametr {number} cutoff - A number with which to compare
+ * @returns {string} short - The string returned if 'coutoff' is larger than 'text'
+ * @returns {string} long - The string returned if 'coutoff' is smaller than 'text'
+ * 
  */
 const longOrShort = (text, cutoff) => {
   if (text.length < cutoff) {

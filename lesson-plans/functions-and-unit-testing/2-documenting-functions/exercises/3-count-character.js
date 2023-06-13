@@ -3,7 +3,12 @@
 console.log('-- begin --');
 
 /**
- *
+ *Count the number of specified characters in the testes string
+ @param {string} text - testes string
+ @param {string} toCount - specified character
+ @returns {number} - count - the number of the specified characters in the string
+ 
+
  */
 const countCharacter = (text, toCount) => {
   if (toCount.length !== 1) {
