@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 alert(`Remembery, the game of remembering.
@@ -41,5 +39,17 @@ if (randomFrom1To3 === 1) {
 }
 
 /* -- BEGIN: check if the user was correct and let them know -- */
+const correctIsPhrase = attempt === correctAnswer;
+let resultGame = '';
+
+if (correctIsPhrase) {
+  resultGame = `this answer ${attempt} correct. You WIN!!!`;
+} else {
+  resultGame = 'You LOST :( Try again.';
+};
+
+alert(resultGame);
+
+
 
 /* -- END: check if the user was correct and let them know -- */

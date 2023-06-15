@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -17,12 +15,12 @@ console.log('lowerCaseString:', lowerCaseString);
 
 let upperCaseString = '';
 
-for (_; _; _) {
-  const nextLetter = lowerCaseString[_];
-  const letterUpperCased = _._();
-  upperCaseString += _;
+for (let i = 0 ; i < lowerCaseString.length; i++) {
+  const nextLetter = lowerCaseString[i];
+  const letterUpperCased = nextLetter.toUpperCase();
+  upperCaseString += letterUpperCased;
 
-  console.log(_); // your stepper variable
+  console.log(upperCaseString); // your stepper variable
   console.log('upperCaseString:', upperCaseString);
 }
 

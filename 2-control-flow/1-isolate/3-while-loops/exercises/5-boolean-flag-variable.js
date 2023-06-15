@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -19,7 +17,7 @@ console.log('-- begin --');
 */
 
 // constant variables used throughout the script
-const longEnough = 14;
+let longEnough = 14;
 const padding = '.:.';
 
 // accumulator variable, collecting the final result
@@ -27,12 +25,13 @@ let paddedString = 'hi';
 
 // boolean flag variable
 let isLongEnough = false;
-while (_) {
-  paddedString = _;
+while (!isLongEnough) {
+  paddedString += padding;
   console.log(paddedString);
-  if (_) {
-    _;
+  if (longEnough < 12) {
+    isLongEnough = true;
   }
+  longEnough--;
 }
 
 console.assert(

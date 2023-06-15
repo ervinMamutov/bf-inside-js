@@ -1,19 +1,17 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
 
 const word = 'pitsicola';
-const targetLetter = _;
+const targetLetter = 5;
 
 let index = 0;
-while (true) {
+while (index < targetLetter) {
   const nextLetter = word[index];
   console.log(index + ': ' + nextLetter);
 
   if (nextLetter === targetLetter) {
-    _;
+    continue;
   }
 
   index += 1;
