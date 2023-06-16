@@ -1,22 +1,24 @@
 'use strict';
 
-const message = 'Input your name';
-let inputName = '';
-let isName = false;
+const message = 'enter anything longer than 5 characters';
+let inputChar = '';
+let isChar = false;
 
-while (!isName) {
-  inputName = prompt(message);
-  if (inputName === null || inputName === '') {
-    alert('Input correct name');
+while (!isChar) {
+  inputChar = prompt(message);
+  if (inputChar === null || inputChar === '') {
+    alert('that is nothing');
     continue;
   }
 
-  const correctName = `${inputName} : this is correct name`;
-  let isCorrect = confirm(correctName);
+  if (inputChar.length > 5) {
+    isChar = true;
+  } else {
+    alert('too short');
+    continue;
 
-  if (isCorrect) {
-    isName = true;
   }
+ 
 }
 
-alert(`Hello ${inputName}`);
+alert(`${inputChar} is 6 characters long `);
