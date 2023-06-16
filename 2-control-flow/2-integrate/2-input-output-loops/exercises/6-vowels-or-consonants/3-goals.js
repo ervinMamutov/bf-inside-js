@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* for character of String
@@ -10,10 +8,25 @@
 */
 
 let userInput = '';
-while (true) {
+let isValidat = false;
+while (!isValidat) {
   userInput = prompt('enter a word to filter:');
 
   /* -- BEGIN: validate input -- */
+  if (userInput === null || userInput === '') {
+    alert('not empty string, try again');
+    continue;
+  }
+
+  const whiteSpace = new RegExp('\\s', 'g');
+  if (whiteSpace.test(userInput)) {
+    alert('not empty space, try again');
+  } else {
+    isValidat = confirm(
+      `Are you sure that your choice -> ${userInput} <- is the right one? `,
+    );
+    continue;
+  }
 
   /* -- END: validate input -- */
 }
@@ -32,7 +45,13 @@ if (removeVowels) {
 
 let filteredInput = '';
 /* -- BEGIN: filter input -- */
-
+for (const char of userInput) {
+  if (toRemove.includes(char.toUpperCase())) {
+    filteredInput += char;
+  } else {
+    continue;
+  }
+}
 /* -- END: filter input -- */
 
 const finalMessage = `"${userInput}" -> "${filteredInput}"`;
