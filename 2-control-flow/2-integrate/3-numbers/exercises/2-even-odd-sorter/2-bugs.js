@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* look out for:
@@ -11,24 +9,28 @@
 
 */
 
-const userNumber = NaN;
-while (Number.isNaN(userNumber)) {
+let userNumber = NaN;
+let isNumber = false;
+while (!isNumber) {
   const userInput = prompt('enter a number');
 
-  if (userInput === '' && userInput === null) {
+  if (userInput === '' || userInput === null) {
     alert('enter something!');
-    break;
+    continue;
   }
 
-  userNumber = NaN(userInput);
+  userNumber = Number(userInput);
 
-  if (Number.isNaN(userNumber)) {
-    alert('"', userInput, '" is not a number');
+  if (isNaN(userNumber)) {
+    alert(`${userInput} is not a number`);
+    continue;
+  } else {
+    isNumber = true;
   }
-}
+};
 
 if (userNumber % 2 === 0) {
-  alert(userNumber + ' is even');
+  alert(`${userNumber} is even`);
 } else {
-  alert(userNumber + ' is odd');
+  alert(`${userNumber} is odd`);
 }

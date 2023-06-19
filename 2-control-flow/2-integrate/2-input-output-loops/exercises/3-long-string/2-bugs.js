@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* look out for:
@@ -11,20 +9,23 @@
 
 */
 
-const userInput = '';
-const isLongEnough = false;
-while (isLongEnough) {
+let userInput = '';
+let isLongEnough = false;
+while (!isLongEnough) {
   userInput = prompt('enter anything longer than 5 characters');
 
-  if (userInput !== null || userInput !== '') {
+  if (userInput === null || userInput === '') {
     alert('that is nothing');
-  } else if ((userInput.length = 5)) {
+    continue;
+  } else if (userInput.length <= 5) {
     alert('too short');
+    continue;
   } else {
-    isLongEnough === true;
+    isLongEnough = true;
   }
 }
 
 const finalMessage =
   '"' + userInput + '" is ' + userInput.length + ' characters long';
+
 alert(finalMessage);

@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* look out for:
@@ -11,9 +9,9 @@
 
 */
 
-const userInput = '';
-const repetitions = NaN;
-while (true) {
+let userInput = '';
+let repetitions = NaN;
+while (!userInput) {
   userInput = prompt('enter a phrase to repeat:');
 
   if (userInput === '' || userInput === null) {
@@ -25,20 +23,27 @@ while (true) {
 
   repetitions = Number(repetitionsInput);
 
-  if (Number.isNaN(repetitions)) {
-    alert('"' + repetitionsInput + '" is not a number');
+  if (isNaN(repetitions)) {
+    alert(`${repetitionsInput} is not a number`);
     continue;
   }
 
-  const confirmMessage =
-    'is this correct?\n\n' + '- "' + userInput + '"\n' + '- ' + repetitions;
-  const confirmation = confirm(confirmMessage);
+  const confirmMessage = confirm(
+    `is this correct?\n\n' ${userInput} \n - ${repetitions}`,
+  );
+
+  if (confirmMessage) {
+    break;
+  } else {
+    userInput = '';
+    continue;
+  }
 }
 
 let repeatedInput = '';
 
-for (let i = 1; i < repetitions; i++) {
-  repeatedInput = userInput;
+for (let i = 0; i < repetitions; i++) {
+  repeatedInput += userInput;
 }
 
-alert(`"userInput" -> "repeatedInput"`);
+alert(`${userInput} -> ${repeatedInput}`);

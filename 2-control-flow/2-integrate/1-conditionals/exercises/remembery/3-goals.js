@@ -46,7 +46,7 @@ if (correctIsPhrase) {
   resultGame = `this answer ${attempt} correct. You WIN!!!`;
 } else {
   resultGame = 'You LOST :( Try again.';
-};
+}
 
 alert(resultGame);
 

@@ -10,10 +10,5 @@
     "Precourse",
     "typeof"
   ],
-  "ignorePaths": [
-    "node_modules/**",
-    "**/*.json",
-    "**/*.mp4",
-    "**/*.svg"
-  ]
+  "ignorePaths": ["node_modules/**", "**/*.json", "**/*.mp4", "**/*.svg"]
 }

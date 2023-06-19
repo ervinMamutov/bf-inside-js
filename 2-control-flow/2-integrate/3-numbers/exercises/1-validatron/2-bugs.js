@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* look out for:
@@ -9,16 +7,23 @@
   - comparison vs. assignment
 
 */
+let userString = null;
 
-const userString = prompt('enter a number:');
+while (!userString) {
+  userString = prompt('enter a number:');
+  if (userString === null || userString === '') {
+    alert('try again');
+  }
+}
+
 const userNumber = Number(userString);
 
-const inputIsANumber = !Number(userNumber);
+const inputIsANumber = !isNaN(userNumber);
 
 const confirmMessage =
   'did you really enter a number?\n\n' + 'yes -> "ok"\n' + 'no  -> "cancel"';
-const userThinksItsANumber = alert(confirmMessage);
+const userThinksItsANumber = confirm(confirmMessage);
 
-const userIsCorrect = (userThinksItsANumber = inputIsANumber);
+const userIsCorrect = userThinksItsANumber === inputIsANumber;
 
 alert(userIsCorrect ? 'correct!' : 'nope :(');
