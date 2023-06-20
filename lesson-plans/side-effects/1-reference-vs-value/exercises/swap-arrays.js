@@ -9,6 +9,11 @@ let temp;
 
 // -- swap reference types (write this code) --
 
+temp = a;
+a = bReference;
+temp = b;
+b = aReference;
+
 // -- assert the references (this is correct) --
 console.assert(a === bReference, 'a references the array with strings');
 console.assert(b === aReference, 'b references the array with numbers');

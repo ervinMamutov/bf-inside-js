@@ -14,7 +14,14 @@
  * @example
  * addANumber([-2, -1, 0, 1], 1); // [-1, 0, 1, 2]
  */
-const addANumber = () => {};
+const addANumber = (numbers, addMe = 0) => {
+  const newNumber = numbers.map((num) => num + addMe);
+
+  console.log('numbers ' + numbers);
+  console.log('newNumber ' + newNumber);
+
+  return newNumber;
+};
 
 describe('addANumber: adds a given number to each number in an array', () => {
   describe('the function adds to each entry:', () => {
@@ -58,10 +65,14 @@ describe('addANumber: adds a given number to each number in an array', () => {
   });
   describe('there are no side-effects', () => {
     it('returns a new array', () => {
-      writeThisTest;
+      const actual = [-2, -1, 0, 1, 2];
+      const result = addANumber(actual, 4);
+      expect(actual === result).toEqual(false);
     });
     it('does not modify the original array', () => {
-      writeThisTest;
+      const actual = [-2, -1, 0, 1, 2];
+      addANumber(actual, 4);
+      expect(actual).toEqual([-2, -1, 0, 1, 2]);
     });
   });
 });
