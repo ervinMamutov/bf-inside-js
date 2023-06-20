@@ -9,7 +9,16 @@ const deepCompare = (actual, expect) => actual === expect || Object.is(actual, e
  * @param {number[]} [arr=[]] - __
  * @returns {number[]} __
  */
-const copyArray = () => {};
+const copyArray = (arr) => {
+  // const newNumber = Array.from(arr);
+  // const newNumber = arr.slice();
+  const newNumber = [...arr];
+  /* for (const arg of args) {
+    newNumber.push(arg);
+  } */
+  console.log(newNumber);
+  return newNumber;
+};
 
 const _1_arg = [1, 2, 3];
 const _1_returned = copyArray(_1_arg);

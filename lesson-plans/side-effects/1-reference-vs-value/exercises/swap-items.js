@@ -12,6 +12,35 @@ let temp;
 
 // -- swap values (write this code) --
 
+temp = arr1;
+let midResult = [];
+
+for (let i = 0; i < temp.length; i++) {
+  if (typeof temp[i] !== 'number') {
+    arr2.push(temp[i]);
+    arr1.splice(i, 1);
+  }
+  arr2.sort();
+}
+
+console.log(arr1)
+console.log(arr2)
+console.log(temp)
+
+temp = arr2;
+
+for (let i = 0; i < temp.length; i++) {
+  if (typeof temp[i] === 'number') {
+    arr1.push(temp[i]);
+    arr2.splice(i, 1);
+  }
+  arr1.sort()
+}
+
+console.log(arr1)
+console.log(arr2)
+console.log(temp)
+
 // -- assert values (this is correct) --
 console.assert(deepCompare(arr1, [1, 2, 3, 4]), 'array 1');
 console.assert(deepCompare(arr2, ['a', 'b', 'c']), 'array 2');
