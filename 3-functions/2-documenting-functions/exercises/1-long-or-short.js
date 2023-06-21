@@ -5,11 +5,11 @@
 console.log('-- begin --');
 
 /**
- * _
+ * compares the length of the text with the given parametr
  *
- * @_ {_} [_=_] - _
- * @_ {_} [_=_] - _
- * @_ {_} _
+ * @parametr {string} [text= ''] - the value to check
+ * @parametr {number} [cutoff=0] - compared by the parametr
+ * @returnes {string} true -> 'short'; false -> 'long'
  */
 const longOrShort = (text = '', cutoff = 0) => {
   if (text.length < cutoff) {

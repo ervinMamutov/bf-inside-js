@@ -1,10 +1,13 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
 
 /**
+ * shifts the characters in the specified text by the specified offset
+ * 
+ * @parameter {string} [text = ''] a specified text 
+ * @parameter {number} [shift = 0] specified offset
+ * @returnes {string} [encodedString] shifts result
  *
  */
 const unicodeShuffle = (text = '', shift = 0) => {

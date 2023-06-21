@@ -1,11 +1,13 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
 
 /**
+ * skips a specified number of characters in the text
  *
+ * @parameter {string} [text = '']  : specified text
+ * @parameter {number} [toSkip = 1] : a specified number of character
+ * @returnes {string} skipified     : toSkip < 1 -> text ; -> select character
  */
 const skipCharacters = (text = '', toSkip = 1) => {
   if (toSkip < 1) {
