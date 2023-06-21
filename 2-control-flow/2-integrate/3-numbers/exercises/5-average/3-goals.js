@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 const instructions =
@@ -13,8 +11,9 @@ alert(instructions);
 
 let sum = 0;
 let inputCount = 0;
+let isDone = false;
 
-while (true) {
+while (!isDone) {
   const userInput = prompt('enter a number to add, or "done" to finish');
 
   if (userInput === '' || userInput === null) {
@@ -23,6 +22,22 @@ while (true) {
   }
 
   /* -- BEGIN: update sum and inputCount if input is a number, exit if it is "done" -- */
+  if (userInput.toLowerCase() === 'done') {
+    isDone = true;
+    continue;
+  };
+
+  const nextNumber = Number(userInput);
+
+  if (isNaN(nextNumber)) {
+    alert(`ignored, but ${nextNumber} not a number `);
+    continue;
+  };
+
+  sum += nextNumber;
+  inputCount++;
+
+
   /* -- END -- */
 }
 

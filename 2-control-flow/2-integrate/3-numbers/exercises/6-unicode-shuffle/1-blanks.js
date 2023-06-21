@@ -1,12 +1,10 @@
-// #todo
-
 'use strict';
 
 let userInput = '';
 let unicodeShift = NaN;
 
 let userConfirmed = false;
-while (_) {
+while (!userConfirmed) {
   userInput = prompt(
     'enter a phrase, each character will be shifted by character code:',
   );
@@ -16,7 +14,7 @@ while (_) {
     continue;
   }
 
-  while (_) {
+  while (!null) {
     const unicodeShiftInput = prompt(
       'how many unicode numbers do you want the characters to shift?',
     );
@@ -26,9 +24,9 @@ while (_) {
       continue;
     }
 
-    _ = Number(unicodeShiftInput);
+    unicodeShift = Number(unicodeShiftInput);
 
-    if (_) {
+    if (isNaN(unicodeShift)) {
       alert('"' + unicodeShiftInput + '" is not a number');
     } else {
       break;
@@ -36,15 +34,15 @@ while (_) {
   }
   const confirmMessage =
     'is this correct?\n\n' + '- "' + userInput + '"\n' + '- ' + unicodeShift;
-  _ = confirm(confirmMessage);
+  userConfirmed = confirm(confirmMessage);
 }
 
 let encodedString = '';
 
 for (const character of userInput) {
-  const characterCode = character._();
+  const characterCode = character.charCodeAt();
   const newCharCode = characterCode + unicodeShift;
-  const encodedCharacter = String._(newCharCode);
+  const encodedCharacter = String.fromCharCode(newCharCode);
   encodedString += encodedCharacter;
 }
 

@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 const instructions =
@@ -14,37 +12,37 @@ alert(instructions);
 let sum = 0;
 let inputCount = 0;
 
-let stillEnteringNumbers = true;
-while (stillEnteringNumbers) {
-  const userInput = prompt('_');
+let stillEnteringNumbers = false;
+while (!stillEnteringNumbers) {
+  const userInput = prompt('enter a number to add, or "done" to finish');
   console.log('userInput:', typeof userInput, userInput);
 
   if (userInput === '' || userInput === null) {
     alert('nothing is not allowed');
-    _;
+    continue;
   }
 
   if (userInput.toLowerCase() === 'done') {
-    stillEnteringNumbers = false;
-    _;
+    stillEnteringNumbers = true;
+    continue;
   }
 
   const nextNumber = Number(userInput);
   console.log('nextNumber:', typeof nextNumber, nextNumber);
 
-  if (Number.isNaN(nextNumber)) {
+  if (isNaN(nextNumber)) {
     alert('"' + userInput + '" is not a number, it has been ignored');
-    _;
+    continue;
   }
 
-  sum = _;
+  sum += nextNumber;
   console.log('sum:', typeof sum, sum);
 
-  inputCount = _;
+  inputCount++;
   console.log('inputCount:', typeof inputCount, inputCount);
 }
 
-const average = _;
+const average = sum / inputCount;
 console.log('average:', typeof average, average);
 
 const averageMessage = 'the average of your numbers is: ' + average;

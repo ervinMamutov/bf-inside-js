@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 const instructions =
@@ -13,15 +11,19 @@ alert(instructions);
 let sum = 0;
 
 let userInput = '';
-while (true) {
+let isNumber = false;
+while (!isNumber) {
   userInput = prompt('enter a number to add, or "done" to finish');
   console.log('userInput:', typeof userInput, userInput);
 
   // make sure the user input something
-  ___;
+  if (userInput === null || userInput === '') {
+    alert('nothing is not allowed');
+    continue;
+  }
 
   // check if the user input is "done", case-insensitive
-  if (_) {
+  if (userInput.toLowerCase() === 'done') {
     break;
   }
 
@@ -29,10 +31,13 @@ while (true) {
   console.log('nextNumber:', typeof nextNumber, nextNumber);
 
   // continue if the input is not a number
-  ___;
+  if (isNaN(nextNumber)) {
+    alert(`${userInput} is not a number, it has been ignored`);
+    continue;
+  }
 
   // add the new number to the sum
-  _;
+  sum += nextNumber;
   console.log('sum:', typeof sum, sum);
 }
 
