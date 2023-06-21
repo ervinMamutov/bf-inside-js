@@ -1,11 +1,12 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
 
 /**
- *
+ *checks for the presence or absence of character in the word
+ * @parameter {string} [text=''] test value
+ * @parameter {string} [toCount = ''] control value
+ * @returnes {number} false -> -1 ; true -> count
  */
 const countCharacter = (text = '', toCount = '') => {
   if (toCount.length !== 1) {
