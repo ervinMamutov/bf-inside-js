@@ -1,15 +1,16 @@
-// #todo
-
 'use strict';
 
 /**
  * Adds two numbers together.
  *
- * @param {number} [x=_] - The left number.
- * @param {number} [y=_] - The right number.
+ * @param {number} [x = 0] - The left number.
+ * @param {number} [y = 0] - The right number.
  * @returns {number} The sum of x and y.
  */
-__;
+const add = (x = 0, y = 0) => {
+  const result = x + y;
+  return result;
+};
 
 describe('add: adds two numbers', () => {
   describe('how addition works', () => {
