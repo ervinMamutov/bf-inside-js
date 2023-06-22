@@ -1,11 +1,18 @@
-// #todo
-
 'use strict';
 
 /**
- *
+ * reverses a string
+ * 
+ * @parameter {string} toReverse
+ * @returns {string} reverse
  */
-__;
+const reverser = (toReverse = '') => {
+  let reverse = '';
+  for (const char of toReverse) {
+    reverse = char + reverse;
+  }
+  return reverse;
+};
 
 describe('reverser: reverses a string', () => {
   it('reverses one letter', () => {
