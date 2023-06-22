@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /**
@@ -9,24 +7,28 @@
  * @param {number} [y=0] - The right number.
  * @returns {number} The sum of x and y.
  */
-__;
 
-describe('', () => {
-  describe('', () => {
-    it('', () => {
-      const expected = _;
-      const actual = _;
-      expect(_).toEqual(_);
+const sumTwoNumber = (x = 0, y = 0) => {
+  return x + y
+};
+
+describe('sumTwoNumber performs an addition operation', () => {
+  it('call function without argumvents', () => {
+      const expected = 0;
+      const actual = sumTwoNumber();
+      expect(actual).toEqual(expected);
     });
     // ...
-  });
-  describe('', () => {
-    it('', () => {
-      const expected = _;
-      const actual = _;
-      expect(_).toEqual(_);
+  it('call function whith two arguments', () => {
+    const expected = 5;
+    const actual = sumTwoNumber(2, 3);
+    expect(actual).toEqual(expected);
     });
     // ...
+    it('call function whith one arguments', () => {
+    const expected = 5;
+    const actual = sumTwoNumber(5);
+    expect(actual).toEqual(expected);
+    });
   });
-  // ...
-});
+  

@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /**
@@ -11,15 +9,16 @@
  * @returns {string} The text with missing characters.
  */
 const skipCharacters = (text = '', toSkip = 0) => {
-  if (toSkip < _) {
-    return _;
+  if (toSkip < 1) {
+    return text;
   }
 
   let skipified = '';
-  for (_; _; _) {
+  for (let i = 0; i < text.length; i++) {
     if (i % toSkip !== 0) {
-      __;
-    }
+    const charackter = text[i]
+    skipified += charackter;
+    } 
   }
   return skipified;
 };
