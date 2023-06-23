@@ -12,10 +12,12 @@
  * fileToVariable('do-magic.js');
  * // -> 'doMagic'
  */
-export const fileToVariable = (fileName = '') => {
+const fileToVariable = (fileName = '') => {
   const noExtension = fileName.replace('.js', '');
   const camelCase = noExtension.replace(/-./g, (subString) =>
     subString[1].toUpperCase(),
   );
   return camelCase;
 };
+
+export default fileToVariable;

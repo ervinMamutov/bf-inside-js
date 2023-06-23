@@ -1,7 +1,5 @@
-// #todo
-
 debugger;
 
-import { user } from './user.js';
+import user from './user.js';
 
-console.assert(user === _, 'Test 1');
+console.assert(user === 'Marko', 'Test 1');
