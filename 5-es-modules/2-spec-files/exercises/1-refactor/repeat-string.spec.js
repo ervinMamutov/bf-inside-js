@@ -1,5 +1,3 @@
-// #todo
-
 /**
  * Repeats a string a specific number of times.
  *
@@ -8,13 +6,8 @@
  *  repetitions must be greater than zero, and must be an integer
  * @return {string} the text repeated as many times as repetitions
  */
-const repeatString = (text = '', repetitions = 1) => {
-  let repeated = '';
-  for (let i = 0; i < repetitions; i++) {
-    repeated += text;
-  }
-  return repeated;
-};
+
+import repeatString from './repeat-string.js';
 
 describe('repeatString: repeats a string', () => {
   describe('an empty string', () => {

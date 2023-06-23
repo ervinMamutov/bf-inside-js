@@ -1,3 +1,5 @@
 debugger;
 
-export const user = 'Marko';
+const user = 'Marko';
+
+export default user;
