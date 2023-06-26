@@ -46,13 +46,15 @@ while (!userConfirmed) {
 }
 
 // BEGIN: refactor to use `shiftCharacter`
-let encodedString = '';
-for (const character of userInput) {
+const encodedString = shiftCharacters(userInput, unicodeShift);
+
+/* for (const character of userInput) {
   const characterCode = character.charCodeAt();
   const newCharCode = characterCode + unicodeShift;
   const encodedCharacter = String.fromCharCode(newCharCode);
   encodedString += encodedCharacter;
 }
+ */
 // END: refactor
 
 // use the return value

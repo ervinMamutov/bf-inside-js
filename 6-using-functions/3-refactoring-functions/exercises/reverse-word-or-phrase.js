@@ -1,5 +1,3 @@
-// #todo
-
 import { reverse } from './utils/reverse.js';
 
 /* reverse text or words
@@ -30,20 +28,22 @@ if (reverseWords) {
   const newWords = [];
   for (const word of splitText) {
     // BEGIN: refactor this to call `reverse`
-    let reversedWord = '';
+    const reversedWord = reverse(word);
+    /* 
     for (let i = 0; i < word.length; i++) {
       reversedWord = word[i] + reversedWord;
-    }
+    } */
     // END: refactor
     newWords.push(reversedWord); // use the return value
   }
   reversed = newWords.join(' ');
 } else {
   // BEGIN: refactor this to call `reverse`
-  let reversedText = '';
+  const reversedText = reverse (original);
+  /* 
   for (let i = 0; i < original.length; i++) {
     reversedText = original[i] + reversedText;
-  }
+  } */
   // END: refactor
   reversed = reversedText; // use the return value
 }

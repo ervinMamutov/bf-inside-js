@@ -1,5 +1,3 @@
-// #todo
-
 import { keepCharacters } from './utils/keep-characters.js';
 import { repeatCharacters } from './utils/repeat-characters.js';
 

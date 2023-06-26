@@ -1,5 +1,3 @@
-// #todo
-
 import { filter } from './utils/filter.js';
 
 /* for character of String
@@ -38,13 +36,14 @@ const removeVowels = confirm(`what would you like to remove from "${userInput}"?
 const toRemove = removeVowels ? 'aeiou' : 'bcdfghjklmnpqrstvwxyz';
 
 // BEGIN: refactor this to call `filter`
-let filteredInput = '';
-for (const character of userInput) {
+const filteredInput = filter(userInput, toRemove);
+
+/* for (const character of userInput) {
   const lowerCaseCharacter = character.toLowerCase();
   if (!toRemove.includes(lowerCaseCharacter)) {
     filteredInput += character;
   }
-}
+} */
 // END: refactor
 
 // use the return value
