@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #111;
+  color: #fff;
+}
+h1 {
+  color: #FFD700;
+  font-size: 32px;
+  margin-top: 50px;
+}
+p {
+  font-size: 18px;
+}
+#game {
+  margin-top: 30px;
+}
+#guess {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #FFD700;
+}
+#buttons {
+  margin-top: 10px;
+}
+button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #FFD700;
+  color: #111;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #FFA500;
+}
