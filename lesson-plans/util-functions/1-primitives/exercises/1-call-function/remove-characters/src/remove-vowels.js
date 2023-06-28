@@ -10,7 +10,9 @@ const removeVowels = () => {
 
   // --- remove all vowels from the input ---
   //  use `removeCharacters` to write this step of the program
-  ___;
+  const vowelsChar = 'aeiouAEIOU'
+  
+  const noVowels = removeCharacters(userText, vowelsChar);
 
   // --- display the input with no vowels ---
   display('removified', noVowels);
