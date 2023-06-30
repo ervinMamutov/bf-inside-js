@@ -1,5 +1,3 @@
-// #todo
-
 /**
  * takes an array of strings and returns a new array
  *  the new array contains all the numbery strings, cast to number
@@ -17,7 +15,10 @@ export const numberyNumberify = (arr) => {
   };
 
   // fill in the array method names and callbacks
-  const allValidNumbers = arr._(_)._(_);
+  const allValidNumbers = arr
+  .map(item => castToNumber(item))
+  .filter(item => isNotNaN(item));
+  
 
   return allValidNumbers;
 };
