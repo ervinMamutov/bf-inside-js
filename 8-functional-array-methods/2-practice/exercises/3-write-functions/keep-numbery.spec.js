@@ -28,7 +28,7 @@ describe('keepNumbery casts each element in an array to type "number"', () => {
       expect(actual).toEqual(expected);
     });
     it('converts mixed type arrays to Number', () => {
-      const expected = [, 1, 1, 0];
+      const expected = [1, 1, 0];
       const actual = keepNumbery(['a', 1, true, null, undefined]);
       expect(actual).toEqual(expected);
     });
