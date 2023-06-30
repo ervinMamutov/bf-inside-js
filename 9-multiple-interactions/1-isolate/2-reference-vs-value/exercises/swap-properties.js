@@ -11,6 +11,10 @@ let temp;
 
 // -- swap values (write this code) --
 
+temp = obj1.a;
+obj1.a = obj2.c;
+obj2.c = temp;
+
 // -- assert values (this is correct) --
 console.assert(deepCompare(obj1, { a: 1, b: 2, c: 3 }), 'object 1');
 console.assert(deepCompare(obj2, { a: 'x', b: 'y', c: 'z' }), 'object 2');
